@@ -1,10 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('Test1') {
+      agent any
       steps {
         sh '''#! /bin/bash
-echo "blueocean start"'''
+echo "Testing...1"'''
+      }
+    }
+
+    stage('Test2') {
+      agent any
+      steps {
+        sh '''#! /bin/bash
+echo "Testing...2"'''
       }
     }
 
